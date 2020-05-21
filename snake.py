@@ -45,11 +45,11 @@ while True:
     if snake[0] == food:
         food = None
         while food is None:
-            nf = [
+            new_foof = [
                 random.randint(1, sh-1),
                 random.randint(1, sw-1)
             ]
-            food = nf if nf not in snake else None
+            food = new_food if new_food not in snake else None
         w.addch(food[0], food[1], curses.ACS_PI)
     else:
         tail = snake.pop()
